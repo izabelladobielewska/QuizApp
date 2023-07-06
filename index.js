@@ -1,15 +1,24 @@
-const bookmark = document.querySelector('data-js="bookmark"');
-console.log(bookmark);
+const bookmark = document.querySelector('[data-js="bookmark"]');
+const answerButton = document.querySelector('[data-js="answerButton"]');
 
 bookmark.addEventListener("click", () => {
-  bookmark.classList.toggle(bookmark - checked);
+  bookmark.classList.toggle("bookmark-checked");
 });
 
 answerButton.addEventListener("click", () => {
-  event.preventDefault();
-  const newEntry = document.createElement("p");
-  answerButton.append(newEntry);
-  newEntry.textContent = "There are no answers.";
-});
+  if (!answerButton.getAttribute("checked")) {
+    const answer = document.createElement("p");
 
-const answerButton = document.querySelector('data-js="answerButton"');
+    answer.innerHTML = "The answer is 'flex-direction'!";
+    answer.setAttribute("data-js", "answer-1");
+    answerButton.insertAdjacentElement("afterend", answer);
+    answerButton.innerHTML = "Hide Answer";
+    answerButton.setAttribute("checked", true);
+  } else {
+    const answer = document.querySelector('[data-js="answer-1"');
+
+    answer.remove();
+    answerButton.innerHTML = "Show Answer";
+    answerButton.removeAttribute("checked");
+  }
+});
