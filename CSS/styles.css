@@ -20,10 +20,42 @@ body {
   background-image: linear-gradient(to left, #3c8c9a, #5d5bd2);
   background-clip: text;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  border: 3px solid rgb(0, 0, 0);
+  margin: 10px 10px 3rem 10px;
+}
+.question-field {
+  height: 100px;
+  width: 300px;
+}
+.answer-field {
+  height: 50px;
+  width: 300px;
+  margin: 0rem 2rem 0rem 2rem;
+}
+.tag-field {
+  height: 3rem;
+  width: 300px;
+  margin: 0rem 2rem 0rem 2rem;
+}
 
-/* Make first question card visible */
 .main-container {
-  margin: 11rem 0;
+  margin: 10rem 0;
+  flex-direction: column;
+  display: flex;
+
+  align-items: center;
 }
 
 h1 {
@@ -34,6 +66,9 @@ h1 {
 h2 {
   font-size: 2.5rem;
   padding: 0.7rem 2rem;
+}
+h3 {
+  padding: 0.3rem 1rem;
 }
 
 ul {
@@ -102,7 +137,7 @@ img {
   top: -10px;
   right: 10px;
   font-size: 4rem;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.508);
 }
 
 .question-card i:hover {
@@ -113,7 +148,7 @@ img {
   border: purple;
 }
 .bookmark-checked {
-  color: purple;
+  color: rgb(150, 99, 209);
 }
 
 .show-answer {
@@ -122,17 +157,61 @@ img {
   border-radius: 0.5rem;
   margin: 2rem;
   padding: 2rem;
-  background-color: #82b7cc22;
+  background-color: #ffffff00;
   box-shadow: 0px 0px 5px red;
   color: #1f0384;
   border: none;
 }
+
 .show-answer:active {
   border-radius: 0.5rem;
   margin: 2rem;
-  background-color: #82b7cc22;
+  background-color: #5b86d049;
   box-shadow: 2px 2px 9px red;
 }
+
+.show-answer:active {
+  border-radius: 0.5rem;
+  margin: 2rem;
+  background-color: #5b86d049;
+  box-shadow: 2px 2px 9px red;
+}
+
+.show-answer:hover {
+  border-radius: 0.5rem;
+  margin: 2rem;
+  background-color: #ffffff3f;
+  box-shadow: 2px 2px 9px red;
+  animation: puls 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes puls {
+  50% {
+    box-shadow: 0px 0px 100px blue;
+  }
+}
+/* button in the new quesiton section*/
+.new-input-button {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #ffffff4a;
+  box-shadow: 0px 0px 7px red;
+  color: #1f0384;
+  border: none;
+}
+
+.new-input-button:hover {
+  border-radius: 0.5rem;
+  background-color: #ffffff3f;
+  box-shadow: 2px 2px 9px red;
+  animation: puls 3s;
+  animation-iteration-count: infinite;
+}
+
+/* button in the new quesiton section*/
 
 .hashtags {
   display: flex;

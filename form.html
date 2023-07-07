@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d5eb725262.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./form.js" defer></script>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Quiz-App</title>
+  </head>
+  <header class="header">
+    <h1>Quiz-App</h1>
+  </header>
+  <body>
+    <main class="main-container">
+    <h2 id="form-title">New Question</h2>
+       <form data-js="from">
+        <form aria-labelledby="form-title">
+            <fieldset>
+              <legend><h3>the Elements</h3></legend>
+              
+              <label for="question">Question-Field:</label>
+              <input type="text" class="question-field" name="question" data-js="question-field" />
+              
+              <label for="answer">Answer-Field:</label>
+              <input type="text" id="answer" class="answer-field" name="answer" data-js="answer-field"/>
+             
+              <label for="tags" >Add Tags:</label>
+              <input type="text" class="tag-field" id="tag" name="tag" /> 
+              
+            </fieldset>    
+            <button type="submit" class="new-input-button">Submit</button>   
+        </form> 
+      <footer class="footer">
+        <nav>
+          <ul class="nav-icon-set">
+            <li>
+              <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li>
+              <a href="bookmark.html"><i class="fa-solid fa-bookmark"></i></a>
+            </li>
+            <li>
+              <a href="./profile.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
