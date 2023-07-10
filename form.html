@@ -21,16 +21,19 @@
        <form data-js="from">
         <form aria-labelledby="form-title">
             <fieldset>
-              <legend><h3>the Elements</h3></legend>
-              
-              <label for="question">Question-Field:</label>
-              <input type="text" class="question-field" name="question" data-js="question-field" />
-              
-              <label for="answer">Answer-Field:</label>
-              <input type="text" id="answer" class="answer-field" name="answer" data-js="answer-field"/>
-             
-              <label for="tags" >Add Tags:</label>
-              <input type="text" class="tag-field" id="tag" name="tag" /> 
+                <legend><h3>the Elements</h3></legend>
+                
+                <label for="question">Question-Field:</label>
+                <textarea class="question-field" name="question" maxlength="150" data-js="question-field"></textarea>
+                <p data-js="questionLettersLeft"></p>
+                
+                <label for="answer">Answer-Field:</label>
+                
+                <textarea id="answer" class="answer-field" maxlength="150" name="answer" data-js="answer-field"></textarea>
+                <p data-js="answerLettersLeft"></p>
+                
+                <label for="tags" >Add Tags:</label>
+                <textarea class="tag-field" id="tag" name="tag" data-js="tag-field"></textarea>
               
             </fieldset>    
             <button type="submit" class="new-input-button">Submit</button>   
